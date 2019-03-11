@@ -12,12 +12,13 @@ public class StreamWorks {
 		arr.add("Astrig");
 		arr.add("Test");
 		arr.add("ABcd");
-		normalIterStrColl(arr);
-		streamStrColl(arr);
+		
+		normalIterationSortingStringCollection(arr);
+		streamSortingStringCollection(arr);
 	}
 	
-	public static void normalIterStrColl(List<String> arr) {
-		System.out.println("With normal Iteration --->");
+	public static void normalIterationSortingStringCollection(List<String> arr) {
+		System.out.println("With normal Iteration sorting String collection stating with AB--->");
 		for (String elem : arr) {
 			if(elem.startsWith("AB")) {
 				System.out.println("Elem is : " + elem);
@@ -25,10 +26,10 @@ public class StreamWorks {
 		}
 	}
 	
-	public static void streamStrColl(List<String> arr) {
-		System.out.println("With Collect method --->");
+	public static void streamSortingStringCollection(List<String> arr) {
+		System.out.println("With Collect method sorting String collection stating with AB --->");
 		System.out.println(arr.stream().filter(elem -> elem.startsWith("AB")).map(elem -> "Elem is : " + elem).collect(Collectors.toList()));
-		System.out.println("With forEach method --->");
+		System.out.println("With forEach method sorting String collection stating with AB--->");
 		arr.stream().filter(elem -> elem.startsWith("AB")).map(elem -> "Elem is : " + elem).forEach(System.out::println);
 	}
 }
