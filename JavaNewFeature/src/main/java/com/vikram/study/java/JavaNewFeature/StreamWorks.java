@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class StreamWorks {
 	
 	public static void main(String[] args) {
-		List<String> arr = new ArrayList<String>();
+		List<String> arr = new ArrayList<>();
 		arr.add("ABanchan");
 		arr.add("Astrig");
 		arr.add("Test");

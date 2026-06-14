@@ -21,15 +21,15 @@ public class ConcurrentHashMapVsSynchronizedHashMap {
 	public static void main(String[] args) throws InterruptedException {
  
 		// Test with Hashtable Object
-		normalHashTableObject = new Hashtable<String, Integer>();
+		normalHashTableObject = new Hashtable<>();
 		PerformMultiThreadTest(normalHashTableObject);
  
 		// Test with synchronizedMap Object
-		synchronizedHashMapObject = Collections.synchronizedMap(new HashMap<String, Integer>());
+		synchronizedHashMapObject = Collections.synchronizedMap(new HashMap<>());
 		PerformMultiThreadTest(synchronizedHashMapObject);
  
 		// Test with ConcurrentHashMap Object
-		concurrentHashMapObject = new ConcurrentHashMap<String, Integer>();
+		concurrentHashMapObject = new ConcurrentHashMap<>();
 		PerformMultiThreadTest(concurrentHashMapObject);
  
 	}

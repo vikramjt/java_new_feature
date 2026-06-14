@@ -11,8 +11,10 @@ class StreamsDemo{
     List<Integer> numberList = Arrays.asList(4,6,5,10,9,5,9,10); 
     System.out.println("Number List : "  + numberList); 
     // demonstration of map method 
-    List<Integer> square = numberList.stream().map(x -> x*x). 
-                           collect(Collectors.toList()); 
+    List<Integer> square = numberList
+            .stream()
+            .map(x -> x*x)
+            .collect(Collectors.toList());
     System.out.println("Square of number List : "  + square + "\n"); 
   
     // create a list of String 
@@ -23,7 +25,7 @@ class StreamsDemo{
     List<String> filterNameList = namesList.stream().filter(s->s.startsWith("S")).collect(Collectors.toList()); 
     System.out.println("Result of using filter() method for string starting with S : " + filterNameList + "\n"); 
   
-    //Demonstration of sorted method.
+    //Demonstration of a sorted method.
     //It will be sorting based on the natural order.
     System.out.println("List of String before sorting : " + namesList);
     List<String> sortedStrList = namesList.stream().sorted().collect(Collectors.toList()); 
